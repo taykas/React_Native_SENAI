@@ -1,14 +1,31 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router'; 
+const styles = StyleSheet.create({
+    colorBlue: {
+        color: "purple",
+        fontSize: 32
+    },
+    div: {
+        flex: 1,
+        alignItems:'center',
+        justifyContent: 'center'
+    },  
+    square: {
+        width: 150,
+        height: 150,
+        backgroundColor: "purple"
+    }
+})
 
 export default function HomeScreen() {
     return (
-        <h1>Hello World</h1>
+        <>
+            <View>
+                <Text style={styles.colorBlue}>Hello World!</Text>
+            </View>
+            <View style={styles.div}>
+                <View style={styles.square}></View>
+            </View>
+        </>
     );
 }
